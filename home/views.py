@@ -23,6 +23,14 @@ def services(request):
     return render(request,'services.html')
 
 def contact(request):
+    if request.method == "POST":
+        name = request.POST["name"]
+        number = request.POST["number"]
+        email = request.POST["email"]
+        message = request.POST["message"]
+
+
+        
     return render(request,'contact.html')
 
 def blogs(request):
